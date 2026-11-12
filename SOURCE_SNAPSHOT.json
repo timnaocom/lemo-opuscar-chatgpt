@@ -1,9 +1,0 @@
-{
-  "source_archive": "lemo-opuscar-main.zip",
-  "source_sha256": "c031ffd327ac4d7d4b36f6055d1d57f58abbc89e9132a7dc39560217dab2014c",
-  "snapshot_date": "2026-11-12",
-  "original_repository": "https://github.com/lemomo-ai/lemo-opuscar",
-  "exact_upstream_commit": "unknown (archive has no .git metadata)",
-  "adaptation_version": "1.0.0-rc.2",
-  "changes": "Original style guides and core toolchain retained; executable demo sources and media excluded."
-}
