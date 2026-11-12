@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"></head>
+<body style="margin:0;overflow:hidden;background:#0c1724"><canvas id="c"></canvas>
+<script>
+const c=document.getElementById('c');const x=c.getContext('2d');
+function size(){c.width=innerWidth;c.height=innerHeight};addEventListener('resize',size);size();
+window.DUR=2;window.EV=[];window.READY=true;
+window.TEXTS=t=>[{id:'title',text:'Create with clarity',x0:c.width*.08,y0:c.height*.26,x1:c.width*.82,y1:c.height*.55}];
+window.render=t=>{
+ const w=c.width,h=c.height,p=Math.max(0,Math.min(1,t/2));
+ x.fillStyle='#0c1724';x.fillRect(0,0,w,h);
+ // Deterministic particles; positions depend only on i and time.
+ for(let i=0;i<23;i++){
+   const xx=(i*83.11 + 14 + t*11)%w,yy=(i*59.13+36)%h;
+   x.beginPath();x.fillStyle='rgba(255,196,113,.32)';x.arc(xx,yy,Math.max(1,w*.003),0,Math.PI*2);x.fill();
+ }
+ const ease=1-Math.pow(1-p,3), cx=w*(.13+.68*ease);
+ x.strokeStyle='#ffbf73';x.lineWidth=Math.max(3,w*.008);x.lineCap='round';x.beginPath();x.moveTo(w*.11,h*.75);x.lineTo(cx,h*.75);x.stroke();
+ x.textBaseline='middle';x.fillStyle='#f6efdf';x.font=`700 ${Math.round(w*.065)}px system-ui, sans-serif`;
+ x.globalAlpha=Math.max(.01,Math.min(1,p*5));x.fillText('Create with clarity',w*.08,h*.42);x.globalAlpha=1;
+ x.font=`${Math.round(w*.027)}px system-ui, sans-serif`;x.fillStyle='#aabfd0';x.fillText('Original 2-second local render test',w*.085,h*.58);
+};window.render(0);
+</script></body></html>

@@ -1,0 +1,44 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "lemo-opuscar-chatgpt",
+  "version": "1.0.0-rc.2",
+  "description": "Unofficial Lemo-Opuscar video-style skill for planning and locally rendering original code-driven films with approved execution tools.",
+  "author": {
+    "name": "TimNao AI Skills Lab",
+    "url": "https://timnao.com"
+  },
+  "homepage": "https://timnao.com",
+  "license": "MIT",
+  "keywords": [
+    "video",
+    "animation",
+    "chatgpt",
+    "codex",
+    "skills",
+    "film"
+  ],
+  "extensions": {
+    "com.openai": {
+      "onboardingSkill": "./skills/lemo-opuscar-chatgpt/SKILL.md",
+      "interface": {
+        "displayName": "Lemo-Opuscar ChatGPT Edition",
+        "shortDescription": "Plan and render code-driven films with approval gates.",
+        "longDescription": "Use 66 code-drawn Lemo-Opuscar styles for original video production. Rendering requires an authorized local execution environment; no cloud render server is included.",
+        "developerName": "TimNao AI Skills Lab",
+        "category": "Productivity",
+        "capabilities": [
+          "Read",
+          "Write"
+        ],
+        "websiteURL": "https://timnao.com",
+        "defaultPrompt": [
+          "Suggest a visual style for my 30-second explainer; show the storyboard first and do not render yet.",
+          "Run a read-only dependency check and report what I need to install."
+        ],
+        "composerIcon": "./assets/icon.png",
+        "logo": "./assets/logo.png",
+        "brandColor": "#123654"
+      }
+    }
+  }
+}

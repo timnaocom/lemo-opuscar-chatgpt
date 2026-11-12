@@ -1,0 +1,7 @@
+interface:
+  display_name: "Lemo-Opuscar ChatGPT"
+  short_description: "Plan and create cinematic code-driven videos"
+  icon_small: "./assets/icon-small.png"
+  icon_large: "./assets/icon-large.png"
+  brand_color: "#123654"
+  default_prompt: "Use $lemo-opuscar-chatgpt to propose three video styles and a storyboard first; do not render until I approve."
